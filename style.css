@@ -1,0 +1,910 @@
+@charset "utf-8";
+/*
+Theme Name: hongiksidi
+Theme URI: http://www.hongiksidi.com/2010
+Description: Variable grid layout, easing effect on window resizing.
+Version: 1.0
+Author: Seo, jeong-min
+Author URI: http://www.seojeongmin.com
+Tags: flexible-width, threaded-comments
+
+
+Index:
+  - Basic Elements
+  - Basic Styling
+  - Layout
+  - Grid Items, Single Item and Comments
+  - Navigation and Sidebar Widget
+  - Form Elements
+
+*/
+body { 
+    width:100%;		
+	background-color: #fff;
+	letter-spacing:0px;
+	margin: 0 auto;
+	padding: 0;
+	color: #000000;
+	font-family: Georgia, palatino, AppleMyungjo, batang, sans-serif, Tahoma, Verdana ;
+	font-size: 12px;
+	line-height: 150%;
+	word-spacing: -5%;
+	letter-spacing:-0.25pt;
+}
+
+a {
+	font-family: Georgia, palatino, AppleMyungjo, batang, sans-serif, Tahoma, Verdana ;	
+	letter-spacing:-5%
+	word-spacing:-5%
+	font-size: 12px;	
+	color: #000;
+	letter-spacing:0.5pt;
+	word-spacing: -5%;
+	text-decoration: none;
+	letter-spacing:-0.25pt;
+}
+a:hover {
+	text-decoration: line-through;
+	color: #000000;
+}
+a img {
+    padding:0px;
+    background-color: #fff;
+	border: 0px dotted #e6e6e6
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	margin: 0;
+}
+h1 {
+	font-family: Georgia, palatino, AppleMyungjo, batang, sans-serif, Tahoma, Verdana ;
+	font-size: 11px;
+	
+}
+h2,
+h3,
+h4,
+h5,
+h6 {
+	font-size: 12px;
+	padding-left: 5px;
+}
+
+blockquote {
+	margin: 0;
+	padding: 10px;
+	border-left: 5px dotted #e9e9e9;
+	background-color: #fff;
+	color: #666666;
+}
+
+pre {
+	overflow: auto;
+	margin: 0;
+	padding: 10px;
+	background-color: #fff;
+	color: #666666;
+}
+
+fieldset {
+	border: 1px dotted #ccc;
+	padding: 10px;
+}
+
+table {
+	margin: 0;
+	border: 1px dotted #ccc;
+}
+th, td {
+	padding: 2px 4px;
+	/*border: 1px dotted #e9e9e9;*/
+}
+th {
+	background-color: #fff;
+	font-weight: normal;
+}
+td {
+	background-color: #fff;
+}
+
+/* ---------- Basic Styling ---------- */
+
+.aligncenter {
+   display: block;
+   margin-left: auto;
+   margin-right: auto;
+}
+
+.alignright {
+	margin: 0 0 2px 150px;
+}
+
+.alignleft {
+	float: left;
+	margin: 0 10px 2px 0;
+}
+
+img.centered {
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+img.alignright {
+	padding: 5px;
+	display: inline;
+	margin-left:0px;
+}
+
+img.alignleft {
+    position:absolute;
+	margin-left: -220px;
+	display: inline;
+	padding: 5px;
+}
+
+.caution {
+	padding: 10px;
+	color: #e9e9e9;
+	text-align: center;
+	background-color: #fff;
+}
+noscript .caution {
+	margin: 0;
+}
+
+.wp-caption {
+	width: 100%;
+	border: 1px dotted #e3e3e3;
+	border-radius: 4px;
+	-moz-border-radius: 4px;
+	-khtml-border-radius: 4px;
+	-webkit-border-radius: 4px;
+	background-color: #ffffff;
+	text-align: center;
+}
+.wp-caption img {
+	padding-top: 5px;
+}
+
+.wp-caption-text {
+	margin: 5px 0;
+	text-align: center;
+	font-size: 12px;
+	color: #666666;
+}
+
+code strong {
+	color: #cc3366;
+	font-weight: normal;
+}
+
+
+/* ---------- Layout ---------- */
+
+#top-container {
+	margin: 0 auto;	
+	background: white;
+}
+
+#container {	
+	color: #000000;		
+	padding: 0;
+}
+
+	#header {
+		width:100%;
+		padding:0 20px;
+	    padding-top: 15px;
+		margin: 10px 40px 0px 40px;		
+		padding-bottom: 0;
+		margin: 0;
+		padding-left: 40px;
+		padding-top: 30px;
+	}
+
+	#header h1 {
+	line-height: 150%;
+	margin: 0;
+	color: #000000;
+	}
+
+	#header h1 a{
+		margin: 0;
+		color: #000000;
+	}
+	#header p {
+		margin: 0;
+	}
+
+.logo_top {
+	float:left;
+	width: 70px;	
+	height:75px;
+	background: url() no-repeat center top; 
+	margin-right:20px;
+	margin-bottom:20px;
+	margin-top:3px;
+	}
+.info_top {
+	float:left;
+	width: 350px;	
+	height:75px;
+	margin-top:3px;
+	font-size: 12px; 
+	font-weight:normal;
+	font-family: Georgia, palatino, AppleMyungjo, batang, sans-serif, Tahoma, Verdana ;
+	line-height: 150%; 
+	letter-spacing:-0.25pt;
+}
+	.menu_link {
+	border-top:0px dotted #000;
+	padding-top:10px;
+	height:18px;
+	letter-spacing:-0.25pt;
+	color: #000; 
+	font-size: 11px; 
+	font-weight:normal;
+	font-family: Georgia, palatino, AppleMyungjo, batang, sans-serif, Tahoma, Verdana ;
+	line-height: 150%; 	 
+}
+
+	.menu_link1 {
+	padding-left:20px;
+	letter-spacing:-0.25pt;
+	color: #000; 
+	font-size: 11px; 
+	font-weight:normal;
+	font-family: Georgia, palatino, AppleMyungjo, batang, sans-serif, Tahoma, Verdana ;
+	line-height: 150%; 	 
+}
+
+	.menu_link2 {
+	padding-left:20px;
+	letter-spacing:-0.25pt;
+	color: #000; 
+	font-size: 14px; 
+	font-weight:normal;
+	font-family: Georgia, palatino, AppleMyungjo, batang, sans-serif, Tahoma, Verdana ;
+	line-height: 150%; 	 
+}
+
+
+	.menu_now {
+	margin-left:-20px;
+	margin-right:-20px;
+	margin-top:15px;
+	margin-bottom:15px;
+	padding:15px;
+	letter-spacing:-0.25pt;
+	color: #000;
+	border : 4px solid #000;
+	font-size: 14px; 
+	font-weight:normal;
+	font-family: Georgia, palatino, AppleMyungjo, batang, sans-serif, Tahoma, Verdana ;
+	line-height: 150%; 	 
+}
+
+	.menu_tit {
+	padding-top:30px;
+	letter-spacing:-0.25pt;
+	color: #000; 
+	font-size: 14px; 
+	height:30px;
+	border-top: 0px dotted #ccc;
+	border-bottom:0px solid #000;
+	font-weight:normal;
+	font-family: Georgia, palatino, AppleMyungjo, batang, sans-serif, Tahoma, Verdana ;
+	line-height: 150%; 	 
+}
+
+	.contents_box {
+	letter-spacing:-0.25pt;
+	color: #000; 
+	font-size: 14px; 
+	border-top: 1px dotted #ccc;
+	border-bottom:0px solid #000;
+	font-weight:normal;
+	font-family: Georgia, palatino, AppleMyungjo, batang, sans-serif, Tahoma, Verdana ;
+	line-height: 150%;
+	margin: 0px 0px 35px 0px;
+
+}
+
+	.contents_box {
+	letter-spacing:-0.25pt;
+	color: #000; 
+	font-size: 14px; 
+	border-top: 1px dotted #ccc;
+	border-bottom:0px solid #000;
+	font-weight:normal;
+	font-family: Georgia, palatino, AppleMyungjo, batang, sans-serif, Tahoma, Verdana ;
+	line-height: 150%;
+	margin: 0px 0px 35px 0px;
+
+}
+
+	.blog_title{	
+	line-height:18px;
+	font-size: 12px;
+	margin-left:70px;
+
+	}
+
+	.blog_description {
+	position: relative; top:0px; margin: 0;
+	padding-top:12px;
+	color: #000; 
+	font-size: 12px; 
+	font-weight:normal;
+	font-family: Georgia, palatino, AppleMyungjo, batang, sans-serif, Tahoma, Verdana ;
+	line-height: 150%; 
+}
+
+	.menu {position: relative; margin-left:0px; top:60px;
+	height:100px;	
+	letter-spacing:-0.25pt;
+	color: #000; 
+	font-size: 12px; 
+	font-weight:normal;
+	font-family: Georgia, palatino, AppleMyungjo, batang, sans-serif, Tahoma, Verdana ;
+	line-height: 150%; 	 
+}
+
+
+	.exhibit_logo {position: absolute; top:0px; margin-left: 0px; width:100px;
+	 color: #000; 
+	 font-size: 12px; 
+	 font-weight:normal;
+	 font-family: Georgia, palatino, AppleMyungjo, batang, sans-serif, Tahoma, Verdana ;
+	 line-height: 150%; 
+	 background: url() no-repeat left top; }
+}
+
+	.exhibit_info {position: relative; top:0px; margin-left: 0px; width:100px;
+	 color: #000; 
+	 font-size: 12px; 
+	 font-weight:normal;
+	 margin-left:0px;
+	 font-family: Georgia, palatino, AppleMyungjo, batang, sans-serif, Tahoma, Verdana ;
+	 line-height: 150%; 
+}
+
+	#contents {		
+	margin:40px;
+	margin-top:20px;
+	padding-top: 10px;
+
+	}
+
+
+
+	#grid-wrapper {
+	margin-left: 40px;
+	margin-top: 20px;
+	padding: 0;
+	padding-top: 1000px; /* Prevent flicker in grid area. Check header.php. */
+	}
+
+	#single-wrapper {
+	padding-bottom:20px;
+	margin: 0 40px 0 40px;	
+	padding-top: 1000px; /* for single-page effect */
+	border-bottom: 1px dotted #ccc;
+	}
+
+	#clear {
+	clear: both; 
+	}
+
+	#bottom-container {
+	clear: both;
+	width: 100%;
+	font-size: 11px; 
+	font-family: Georgia, palatino, AppleMyungjo, batang, sans-serif, Tahoma, Verdana ;
+	line-height: 150%; 
+	font-weight:normal;
+	margin-top:0px;
+}
+
+	#footer-wrapper {	
+	background: none;
+
+	}
+
+	#footer {		
+	border-top: 1px dotted #ccc;
+	margin:40px;
+	padding-top: 15px;
+
+	}
+	#footer a{		
+	font-style:italic;
+	font-size:11px;
+	
+	line-height:22px;
+	}
+
+	.footer_designer {
+	 float:left;
+	 margin-top:-32px; 
+	 margin-left: 440px;
+	 font-weight:normal;
+}
+	.footer_designer a{
+	font-style:italic;
+
+}
+
+	#footer copy {	
+	float:left;
+	width:440px;
+	margin:0;
+	padding-top: 10px;
+	}
+	
+	#footer copy a{	
+	float:left;
+	width:440px;
+	margin:0;
+	padding-top: 10px;
+	font-style:italic;
+	}
+	
+
+	#footer p a{
+	   font-style:italic;
+	   
+	}
+
+
+	.footer_designer a{
+	font-style:italic;
+
+
+}
+
+	
+	#sponsor {		
+	border-top: 1px dotted #ccc;
+	margin:40px;
+	height:0px;
+	}
+
+	.sponsor_txt {
+	 padding-top:23px;
+	 float:left;
+	 width:80px;
+	 margin:0;	
+	 font-style:italic;
+	 font-weight:normal;
+	 font-size: 12px;
+	 font-family: Georgia, palatino, AppleMyungjo, batang, sans-serif, Tahoma, Verdana ;
+	 line-height: 150%;
+}
+	.sponsor_logo {
+	 margin-top:12px;
+	 float:left;
+	 height:40px;
+	 position:relative;
+	 margin-right:40px;
+
+}
+
+	
+	.warming {
+	color:#fff;
+	font-size: 24px;
+	margin-top:20px;
+	font-family: Georgia, palatino, AppleMyungjo, batang, sans-serif, Tahoma, Verdana ;
+	line-height: 150%;
+	font-style:italic;
+	margin-left:50px;
+
+
+}	
+
+.warming2 {
+	position: absolute; 
+	right: 40px; 
+	top: 40px; 
+	font-size:14px; 
+	font-family: Georgia, palatino, AppleMyungjo, batang, sans-serif, Tahoma, Verdana ;
+	line-height: 150%;
+	font-style:italic;
+
+}
+
+	.warming a{
+	color:#fff;
+}
+	.warming2 a{
+	color:#fff;
+}
+
+
+/* ---------- Grid Items, Single Item and Comments ---------- */
+
+/* value = (width * n) + (15+15+5) * (n-1). 
+ * ex.
+ * width=200 : 200, 425, 650, 875
+ * width=250 : 250, 525, 800, 1075
+ * width=290 : 290, 615, 940, 1265
+ */
+div.x1 { width:  180px; }
+div.x2 { width:  180px; }
+div.x3 { width:  180px; }
+div.x4 { width:  180px; }
+
+
+div.single-item {
+	overflow: hidden;
+	margin: 20px 0px 5px 0px;
+	border: 0;	
+	font-weight: normal;
+}
+
+div.grid-item {
+	overflow: hidden;
+	margin: 20px 40px 5px 0px;
+	border: 0;	
+	font-weight: normal;
+}
+
+div.grid-item h2.post-title,
+div.single-item h2.post-title,
+div.grid-item h2.post-title a,
+div.single-item h2.post-title a{
+	top:0px;
+    height:35px;
+	font-size: 14px;
+    font-weight: normal;
+	margin: 0;
+	padding-left: 0;
+	
+}
+
+
+div.single-item h2.post-title2,
+div.single-item h2.post-title2 a{
+    font-size:14px;
+    position: absolute;
+	width: 100%;
+	height:35px;
+	margin-left: 107px;
+	margin-top: -8px;
+	border-bottom: 0px dotted #ccc;
+	font-weight:normal;
+
+}
+
+div.single-item h2.post-title3,
+div.single-item h2.post-title3 a{    
+    font-size:14px;
+    width:200px; 	    
+	margin: 0;
+	padding-left: 0;
+	font-weight:normal;
+
+}
+
+
+div.grid-item div.grid-image {
+	margin-bottom: 1em;
+}
+
+div.grid-item div.wp-caption {
+	display: none;
+}
+
+div.post-body p,
+div.comment-body p {
+line-height:20px;
+position:relative;
+width: 100%;
+margin-top:50px; 
+font-size: 12px;
+margin-left:220px;
+margin-bottom:40px;
+}
+
+
+div.post-body p img,
+div.post-body p object {
+margin-bottom:10px;
+max-width: 100%;
+padding: 0;
+}
+
+.post-meta2,
+.comment-meta2 {
+float:left;
+width:180px;
+height:50px;
+margin-bottom: 10px;
+margin-top:20px;
+border-top: 1px dotted #ccc;
+}
+
+.post-meta3,
+.comment-meta3 {
+    position:relative;
+	margin-left: 0px;
+	width:240px;
+	height:65px;
+	padding-top:0px;
+	margin-bottom: 10px;
+	border-top: 1px dotted #ccc;
+}
+
+.post-meta4,
+.comment-meta4
+{   
+    margin-left:220px;
+    margin-top:20px;
+	padding-left:1px;
+	padding-top:10px;
+	border-top: 1px dotted #ccc;
+}
+
+p.post-meta,
+p.comment-meta, 
+p.post-meta a,
+p.comment-meta a{
+    font-style:italic;
+    font-weight:normal;	
+    height:35px;		
+	margin-bottom: 10px;
+	padding-bottom: 15px;
+	color:#777;
+	border-bottom: 0px dotted #ccc;
+	letter-spacing:-0.25pt;
+	
+}
+
+.post-meta5,
+.comment-meta5, 
+.post-meta5 a,
+.comment-meta5 a{
+    font-style:italic;
+    font-weight:normal;	
+	color:#777;
+	letter-spacing:-0.25pt;
+	
+}
+
+
+p.post-meta-tag,
+p.comment-meta-tag 
+{
+height:90px;
+padding-top:20px;
+line-height:150%;
+padding-top: 5px;
+font-weight:normal;
+border-top: 0px dotted #ccc;
+
+}
+
+p.post-meta-tag a:hover,
+p.comment-meta-tag a:hover
+{
+
+}
+
+
+p.post-meta-cate,
+p.comment-meta-cate {
+line-height:150%;
+margin-bottom: 0;
+	padding-top: 3px;
+	border-top: 1px dotted #ccc;
+}
+
+*/
+.comment-list .navigation {
+	margin: 10px 0;
+}
+.comment-list .navigation a {
+	margin-right: 10px;
+}
+
+.comment-list ol li {
+	margin: 10px 0;
+}
+
+.comment-list ol li.trackback {
+	padding: 5px;
+	border: 1px dotted #ccc;
+}
+
+.comment-list ul.children {
+	list-style: none;
+}
+.comment-list ul.children li {
+	border-left: 5px dotted #ccc;
+	padding-left: 5px;
+}
+
+.comment-list li.bypostauthor {
+}
+.comment-list li.bypostauthor cite.fn {
+	text-decoration: underline;
+}
+
+.comment-list li.comment .reply {
+	margin: 10px 0 20px;
+}
+
+
+/* ---------- Navigation and Sidebar Widget ---------- */
+
+/* Pagination for grid items and paginated posts */
+.pagination {
+	margin: 0px auto;
+	font-size: 12px;
+}
+.pagination .current {
+	color: #333333;
+	
+}
+.pagination .next, 
+.pagination .prev {
+}
+
+.pagination .page-numbers,
+.pagination .current {
+	margin: 0 10px 0 0;
+	padding: 10px 15px;
+	text-decoration: none;
+	background: #fff;
+}
+/* page-numbers hover color */
+a.page-numbers:hover {
+	color: #333333;
+	background-color: #fff;
+}
+#post-pagination {
+	margin: 1em 0;
+	color: #c4c4c4;
+}
+#post-pagination .prefix {
+	color: #eaeaea;
+}
+
+/* Sidebar 
+ * In this theme, sidebar is a horizontal line.
+ * Sidebar2 is a block on the bottom.
+ * See also "Form Elements" section.
+ */
+
+#sidebar{	
+	list-style: none;
+	list-style-type: none;
+	margin: 40px 40px 15px 40px;
+	height: 200px;
+	padding-left: 0px;
+	padding-bottom: 20px;
+	border-bottom: 1px dotted #ccc;
+	border-top: 1px dotted #ccc;
+	
+}
+
+
+#sidebar2 {
+	list-style: none;
+	list-style-type: none;
+	margin: 50px 0;
+	padding-left: 0;
+}
+#sidebar li {
+	margin: 2px 0;
+}
+
+
+#sidebar li.widget h2.widgettitle {
+	display: none;
+}
+
+
+#sidebar li.widget ul {
+	list-style: none;
+	margin: 0;
+	padding: 0;
+}
+
+#sidebar li.widget ul li {
+	display: inline;
+	padding-right: 5px;
+}
+
+li.current-cat {
+	text-decoration: underline;
+}
+
+#sidebar2 li.widget {
+	display: block;
+	overflow: hidden;
+	float: left;
+	margin: 0 5px 5px 0;
+	width: 320px;
+	padding: 5px 0 0 0;
+	border: 0;
+}
+
+#sidebar2 h2.widgettitle {
+	margin-top: 0;
+	padding: 5px 10px;
+	color: #333333;
+	background-color: #fff;
+}
+
+#sidebar2 li.widget div {
+	padding: 0 10px;
+	font-size: 12px;
+}
+
+#sidebar2 li.widget ul {
+	margin: 0;
+	padding: 0 10px;
+	font-size: 12px;
+}
+
+#sidebar2 li.widget ul li {
+	list-style: none;
+}
+#sidebar2 ul.children ul li {
+	list-style: none;
+}
+
+#wp-calendar {
+	margin: 1em 0;
+	border: none;
+}
+#wp-calendar caption{
+	text-align: left;
+	margin: 2px 0 0 0;
+	padding: 0;
+}
+#wp-calendar td {
+	text-align: center;
+}
+
+/* ---------- Form Elements ---------- */
+
+div.comment-form {
+	margin: 0;
+	padding: 0;
+}
+
+#commentform {
+	margin: 0;
+	padding: 0;
+}
+#commentform textarea {
+	width: 99%;
+	max-width: 640px;
+}
+
+
+
+	.vector-logo{
+		display:none;
+	
+	}
+	.vector-logo img{
+		max-width:68px;
+		max-height:68px;
+	}
+	.clear{
+
+	height:0px;
+	clear:both;
+	text-indent:-9999px;
+	color:white;
+}
